@@ -4,9 +4,11 @@
   --color-light-grey: #363a3e;
   --color-channel-grey: #2f3236;
   --color-channel-text: #8e9296;
+  --color-channel-light: #393d42;
   --color-border-line: #2c2e31;
   --color-green: #42b680;
   --color-purple: #7288da;
+  --color-userinfo: #292c2f;
 }
 
 * {
@@ -71,10 +73,18 @@ body {
   margin-bottom: 10px;
 }
 
+.serverInfo {
+  background: var(--color-light-grey);
+  width: 100%;
+  height: 100%;
+}
+
 .channels {
   background: var(--color-channel-grey);
   width: 240px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   color: var(--color-channel-text);
 }
 .channels nav {
@@ -91,10 +101,11 @@ body {
 }
 .channels nav span {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .channels-list {
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .channels-list-header {
@@ -102,24 +113,89 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  text-transform: uppercase;
 }
 .channels-list-header h4 {
   font-size: 12px;
+  margin: 0;
 }
 .channels-list-header span {
   font-size: 25px;
+  cursor: pointer;
 }
 
 .channels-list-content-item {
   display: flex;
   align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.channels-list-content-item:hover {
+  background: var(--color-channel-light);
+  color: #ffffff;
 }
 .channels-list-content-item span {
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 10px;
 }
 .channels-list-content-item h5 {
+  cursor: pointer;
   font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.userInfo {
+  background: var(--color-userinfo);
+  margin-top: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.userInfo .user {
+  display: flex;
+  margin-right: 5px;
+}
+.userInfo .user span {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  background: var(--color-purple);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.userInfo .user h4 {
+  margin: 10px 0 5px;
+  color: #ffffff;
+  line-height: 0;
+}
+.userInfo .user p {
+  color: var(--color-channel-text);
+  font-size: 10px;
+}
+
+.icons {
+  margin-left: 0;
+  display: flex;
+}
+.icons span {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background: var(--color-light-grey);
+  border-radius: 50%;
+  margin: 0 3px;
 }
 
 /*# sourceMappingURL=/style.ff1c4cab.css.map */
