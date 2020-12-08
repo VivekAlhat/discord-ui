@@ -80,6 +80,7 @@ body {
   background: var(--color-light-grey);
   width: 100%;
   height: 100%;
+  display: flex;
 }
 
 .channels {
@@ -95,6 +96,7 @@ body {
     align-items: center;
     padding: 15px;
     color: #ffffff;
+    height: 60px;
     border-bottom: 2px solid var(--color-border-line);
     h3 {
       font-size: 16px;
@@ -197,8 +199,95 @@ body {
     justify-content: center;
     height: 30px;
     width: 30px;
-    background: var(--color-light-grey);
+    background: var(--color-green);
     border-radius: 50%;
-    margin: 0 3px;
+    margin: 0 5px;
+  }
+  .settings {
+    background: var(--color-light-grey);
+  }
+}
+
+.chat {
+  width: calc(100% - 240px);
+  background: var(--color-light-grey);
+  display: flex;
+  flex-direction: column;
+  nav {
+    color: #ffffff;
+    border-bottom: 2px solid var(--color-border-line);
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 15px;
+    align-items: center;
+    h2 {
+      margin: 0;
+      font-size: 15px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+
+      span {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.chatbox {
+  display: flex;
+  height: 100%;
+}
+
+.messages {
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: column;
+  .send {
+    margin-top: auto;
+    padding: 15px;
+    input {
+      background-color: #40454a;
+      border: 1px solid var(--color-light-grey);
+      width: 100%;
+      height: 35px;
+      padding: 10px;
+      color: #ffffff;
+    }
+  }
+}
+
+.members {
+  color: #ffffff;
+  width: 240px;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-channel-grey);
+  h4 {
+    margin-top: 0;
+    font-weight: 400;
+  }
+
+  .active-user {
+    display: flex;
+    align-items: center;
+
+    .active-user-gravatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      height: 30px;
+      width: 30px;
+      background: var(--color-light-grey);
+      border-radius: 50%;
+      font-size: 20px;
+    }
   }
 }
