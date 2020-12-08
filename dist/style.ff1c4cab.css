@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+:root {
+  --color-dark-grey: #202326;
+  --color-light-grey: #363a3e;
+  --color-channel-grey: #2f3236;
+  --color-channel-text: #8e9296;
+  --color-border-line: #2c2e31;
+  --color-green: #42b680;
+  --color-purple: #7288da;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.discord {
+  height: 100vh;
+  display: flex;
+}
+
+.servers {
+  background: var(--color-dark-grey);
+  height: 100%;
+  width: 65px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.server-icon {
+  background: var(--color-light-grey);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-radius 0.2s ease-in-out;
+  position: relative;
+}
+.server-icon.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 45px;
+  border-radius: 30px;
+  margin-left: -20px;
+  background: #ffffff;
+}
+.server-icon:hover {
+  border-radius: 25%;
+  background: var(--color-green);
+}
+
+.separator {
+  background: var(--color-light-grey);
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.channels {
+  background: var(--color-channel-grey);
+  width: 240px;
+  height: 100%;
+  color: var(--color-channel-text);
+}
+.channels nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid var(--color-border-line);
+}
+.channels nav h3 {
+  font-size: 16px;
+  margin: 0;
+}
+.channels nav span {
+  font-size: 20px;
+}
+
+.channels-list {
+  padding: 15px;
+}
+
+.channels-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.channels-list-header h4 {
+  font-size: 12px;
+}
+.channels-list-header span {
+  font-size: 25px;
+}
+
+.channels-list-content-item {
+  display: flex;
+  align-items: center;
+}
+.channels-list-content-item span {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.channels-list-content-item h5 {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=/style.ff1c4cab.css.map */
